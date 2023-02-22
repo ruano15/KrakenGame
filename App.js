@@ -1,5 +1,5 @@
 import React from "react";
-import KrakenGame from "./src/views/KrakenGame";
+import RouteTabGame from "./src/routes/RouteTabGame"
 import KrakenRules from "./src/views/KrakenRules";
 import InitialPage from "./src/views/InicialPage";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -15,7 +15,7 @@ export default function App(){
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true}} name="InitialPage" component={InitialPage}/>
-            <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="KrakenGame" component={KrakenGame}/>
+            <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="RouteTabGame" component={RouteTabGame}/>
             <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="KrakenRules" component={KrakenRules}/>
           </Stack.Navigator>
         </NavigationContainer>
