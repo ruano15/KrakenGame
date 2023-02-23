@@ -13,8 +13,8 @@ export default function App(){
   return(
     <NavigationContainer independent={true}>
       <Tab.Navigator>
-        <Tab.Screen options={{headerTitle: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="Home" component={Kraken} />
-        <Tab.Screen options={{headerTitle: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="Settings" component={WoheverShip} />
+        <Tab.Screen options={{headerTitle: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="Kraken" component={Kraken} />
+        <Tab.Screen options={{headerTitle: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="Wohever Ship" component={WoheverShip} />
       </Tab.Navigator>
     </NavigationContainer>
   )
