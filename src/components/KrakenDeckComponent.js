@@ -33,11 +33,18 @@ export default function DeckKrakenComponent(props){
       }
   }
 
+  function onLongPress(){
+    setNome("")
+    setCard(cardBack)
+    cont = 0
+    number.splice(0, number.length)
+  }
+
   return(
     <View style={{width: props.width, height: props.height/1.5, alignItems: "center", justifyContent:"center"}}>
       <View style={{alignItems: "center"}}>
         <Text style={{color: "#FFFFFF", fontSize: props.width/15}}>{nome}</Text>
-        <TouchableOpacity style={{marginTop: props.height/30}} onPress={onPress}>
+        <TouchableOpacity style={{marginTop: props.height/30}} onPress={onPress} onLongPress={onLongPress}>
         <Image style={{width: props.width/1.5, height: props.height/2, resizeMode:"stretch", borderRadius: 20, borderColor: "#000000", borderWidth: 2}} source={card}/>
         </TouchableOpacity>
       </View>

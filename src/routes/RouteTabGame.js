@@ -11,10 +11,10 @@ const Tab = createBottomTabNavigator()
 export default function App(){
 
   return(
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={Kraken} />
-        <Tab.Screen name="Settings" component={WoheverShip} />
+        <Tab.Screen options={{headerTitle: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="Home" component={Kraken} />
+        <Tab.Screen options={{headerTitle: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="Settings" component={WoheverShip} />
       </Tab.Navigator>
     </NavigationContainer>
   )

@@ -13,7 +13,7 @@ export default function InitialPage(){
     const navigation = useNavigation()
 
     function handleGame(){
-        navigation.navigate("KrakenGame")
+        navigation.navigate("RouteTabGame")
     }
     function handleRules(){
         navigation.navigate("KrakenRules")

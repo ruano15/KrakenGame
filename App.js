@@ -12,11 +12,11 @@ export default function App(){
   SystemNavigationBar.stickyImmersive()
 
   return(
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
           <Stack.Navigator>
-            <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true}} name="InitialPage" component={InitialPage}/>
-            <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="RouteTabGame" component={RouteTabGame}/>
-            <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="KrakenRules" component={KrakenRules}/>
+             <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true}} name="InitialPage" component={InitialPage}/>
+              <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="RouteTabGame" component={RouteTabGame}/>
+              <Stack.Screen options={{ title: "", headerTransparent: true, headerShown: true, headerLeft: null}} name="KrakenRules" component={KrakenRules}/>
           </Stack.Navigator>
         </NavigationContainer>
   )

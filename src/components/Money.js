@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageBackground, Text, TouchableOpacity, View } from "react-native";
+import { Alert, Image, ImageBackground, Text, TouchableOpacity, View } from "react-native";
 import dinheiro from "../images/money.png"
 import tentaculo from "../images/tentaculoCortado.png"
 import plus from "../images/plus.png"
@@ -14,7 +14,11 @@ export default function Money(props){
         props.setMoney( props.money - 1)
     }
     function tent(){
-        props.setTentacool(props.tentacool + 1)
+        if(props.tentacool < 10){
+            props.setTentacool(props.tentacool + 1)
+        }else{
+            Alert.alert("", "Limite de tentaculos atingido", [{text: "OK"}])
+        }
     }
     function longPress(){
         props.setTentacool(props.tentacool = 0)
